@@ -1,24 +1,12 @@
 package observer.ENHANCED_SOLUTION;
 
-public class User {
+public class Customer implements Subscriber{
     private String name;
 
-    private boolean isSubscribedToProduct;
-    private boolean isSubscribedToOffer;
-
-    public User(String name, boolean isSubscribedToProduct, boolean isSubscribedToOffer) {
+    public Customer(String name) {
         this.name = name;
-        this.isSubscribedToProduct = isSubscribedToProduct;
-        this.isSubscribedToOffer = isSubscribedToOffer;
     }
-
-    public void notify(Product product){
-        System.out.println("Notifying user: " + name + " about: " + product.getName());
-    }
-    public void notify(Offer offer){
-        System.out.println("Notifying user: " + name + " about: " + offer.getMassage());
-    }
-    public String getName() {
+     public String getName() {
         return name;
     }
 
@@ -26,19 +14,9 @@ public class User {
         this.name = name;
     }
 
-    public boolean isSubscribedToProduct() {
-        return isSubscribedToProduct;
-    }
+    @Override
+    public void notify(String massage) {
 
-    public void setSubscribedToProduct(boolean subscribedToProduct) {
-        isSubscribedToProduct = subscribedToProduct;
-    }
-
-    public boolean isSubscribedToOffer() {
-        return isSubscribedToOffer;
-    }
-
-    public void setSubscribedToOffer(boolean subscribedToOffer) {
-        isSubscribedToOffer = subscribedToOffer;
+        System.out.println("Notifying user : "+name +" about : "+ massage);
     }
 }

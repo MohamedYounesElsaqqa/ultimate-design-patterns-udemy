@@ -1,4 +1,4 @@
-package observer;
+package observer.ENHANCED_SOLUTION;
 
 public class Offer {
     private String massage;

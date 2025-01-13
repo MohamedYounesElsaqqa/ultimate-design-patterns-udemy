@@ -1,4 +1,4 @@
-package observer;
+package observer.ENHANCED_SOLUTION;
 
 public class Product {
     private String name;
@@ -9,7 +9,7 @@ public class Product {
         this.price = price;
     }
 
-    public void notFly(User user){
+    public void notFly(Customer user){
         System.out.println("this is not fiy ");
     }
     public String getName() {
