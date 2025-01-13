@@ -1,4 +1,4 @@
-package observer;
+package observer.ENHANCED_SOLUTION;
 
 public class User {
     private String name;
