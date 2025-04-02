@@ -1,6 +1,6 @@
 package observer.ENHANCED_SOLUTION;
 
-public class Main {
+public class MainObserver {
     public static void main(String[] args) {
         OnlineMarketPlace onlineMarketPlace= new OnlineMarketPlace();
         Subscriber gohar =new Customer( "gohar");

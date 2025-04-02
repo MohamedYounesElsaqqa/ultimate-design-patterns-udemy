@@ -1,6 +1,6 @@
 package observer.observer;
 
-public class Main {
+public class MainObserver {
     public static void main(String[] args) {
         OnlineMarketPlace onlineMarketPlace= new OnlineMarketPlace();
         onlineMarketPlace.addUser(new User("gohar",true,true));
