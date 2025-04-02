@@ -1,23 +1,17 @@
 package Strategy.ENHANCED_SOLUTION;
 
-public class Product {
+public class Products {
     private String name;
     private double price;
     private PricingStrategy pricingStrategy;
 
-    public Product(String name, double price) {
+    public Products(String name, double price, PricingStrategy pricingStrategy) {
         this.name = name;
         this.price = price;
+        this.pricingStrategy=pricingStrategy;
     }
-    public double calculatePrice(String membershipType){
-        if(membershipType.equalsIgnoreCase("regular")){
-            return price;
-        } else if (membershipType.equalsIgnoreCase("gold")) {
-            return price * .9; // 10% discount
-        } else if (membershipType.equalsIgnoreCase("premium")) {
-            return price * .8; // 20% discount
-        }
-        return price;
+    public double calculatePrice(){
+      return pricingStrategy.calculatePrice(price);
     }
     public String getName() {
         return name;

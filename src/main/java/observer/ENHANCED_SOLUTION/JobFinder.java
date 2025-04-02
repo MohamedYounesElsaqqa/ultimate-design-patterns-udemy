@@ -1,6 +1,6 @@
 package observer.ENHANCED_SOLUTION;
 
-public class JobFinder implements Subscriber{
+public class JobFinder implements Subscriber {
     private String name;
     @Override
     public void notify(String massage) {

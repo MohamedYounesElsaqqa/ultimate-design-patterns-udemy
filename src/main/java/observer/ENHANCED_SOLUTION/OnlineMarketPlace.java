@@ -24,20 +24,20 @@ public class OnlineMarketPlace {
         subscribers.put(EventType.JOB_OPENING, new ArrayList<>());
     }
 
-    public void subscriber(EventType eventType,Subscriber subscriber)
+    public void subscriber(EventType eventType, Subscriber subscriber)
     {
         subscribers.get(eventType).add(subscriber);
     }
     //Unsubscribers
-    public void unSubscriber(Subscriber subscriber,EventType eventType)
+    public void unSubscriber(Subscriber subscriber, EventType eventType)
     {
         subscribers.get(eventType).remove(subscriber);
     }
     public void addNewProduct(Product product){
         products.add(product);
-        notifySubscriber(EventType.NEW_PRODUCT,"Add new Product"+product.getName());
+        notifySubscriber(EventType.NEW_PRODUCT,"Add new Products"+product.getName());
     }
-    public void notifySubscriber(EventType eventType,String message){
+    public void notifySubscriber(EventType eventType, String message){
        subscribers.get(eventType).forEach(subscriber -> subscriber.notify(message)
     );
     }

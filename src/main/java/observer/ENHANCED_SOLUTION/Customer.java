@@ -1,6 +1,6 @@
 package observer.ENHANCED_SOLUTION;
 
-public class Customer implements Subscriber{
+public class Customer implements Subscriber {
     private String name;
 
     public Customer(String name) {
